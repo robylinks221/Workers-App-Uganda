@@ -1,0 +1,60 @@
+PREMIUM CONSISTENCY PHASE 3
+===========================
+
+Complete replacement files prepared from your uploaded working Flutter project.
+
+FILES INCLUDED
+--------------
+1. lib/widgets/premium_buttons.dart
+2. lib/features/profile/worker_public_profile_screen.dart
+3. lib/homeowner_job_details.dart
+4. lib/worker_job_details.dart
+
+WHAT THIS PHASE CONSOLIDATES
+----------------------------
+- One reusable premium button system
+- Blue-to-teal gradient primary buttons
+- White premium outline buttons
+- Red premium danger buttons
+- Rounded button endings
+- Safe loading and disabled states
+- Buttons that do not force infinite width
+- Premium worker profile top header
+- Premium Save, Chat and Hire Worker actions
+- Hire Worker uses person_add_alt_1_rounded
+- Premium homeowner Save Changes action
+- Premium worker Apply Now action
+- Clear back navigation on detail screens
+
+REPLACE THESE FILES
+-------------------
+Copy the files from this package into:
+
+~/StudioProjects/workersapp/
+
+Keep the same lib/ folder structure and allow Finder to replace the existing files.
+
+VERIFY
+------
+cd ~/StudioProjects/workersapp
+
+dart format lib/widgets/premium_buttons.dart lib/features/profile/worker_public_profile_screen.dart lib/homeowner_job_details.dart lib/worker_job_details.dart
+
+flutter analyze lib/widgets/premium_buttons.dart lib/features/profile/worker_public_profile_screen.dart lib/homeowner_job_details.dart lib/worker_job_details.dart
+
+Warnings about unused old helper widgets do not stop the build.
+Errors must be corrected before running.
+
+RUN
+---
+Make sure Laravel Sail is running:
+
+cd ~/Development/worker_app_api
+./vendor/bin/sail up -d
+./vendor/bin/sail artisan optimize:clear
+
+Then in another Terminal:
+
+cd ~/StudioProjects/workersapp
+~/Library/Android/sdk/platform-tools/adb reverse tcp:80 tcp:80
+flutter run -d RZCY91RKGMA

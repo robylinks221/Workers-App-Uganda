@@ -1,0 +1,27 @@
+IMPORTANT BACKEND NOTE
+======================
+
+This update uses the existing WorkerProfileService.saveProfile() method and
+the existing POST /api/worker/profile endpoint.
+
+It sends:
+- full_name
+- age
+- religion
+- gender
+- district
+- work_type
+- availability
+- national_id_number
+- experience_years
+- bio
+- hourly_rate
+- monthly_rate
+- profile_photo (only when replaced)
+- national_id_document (only when replaced)
+- gallery_image_1/2/3 (only when replaced)
+
+The Laravel worker-profile endpoint must update the existing worker profile
+without requiring replacement files on every edit. Existing profile photo,
+National ID document and gallery photos should be preserved when their file
+fields are absent.

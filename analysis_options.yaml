@@ -1,0 +1,10 @@
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  exclude:
+    # Legacy/backup Dart sources kept outside the live Flutter app.
+    - core/**
+    - lib/features/auth/screens/xx.dart
+
+linter:
+  rules:

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1046426311202",
+    "project_id": "workers-app-4e3e1",
+    "storage_bucket": "workers-app-4e3e1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1046426311202:android:e3458a9a14a22eab9b087b",
+        "android_client_info": {
+          "package_name": "com.robylinks.maidsapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9mQzC1_if-BCXf__nZRoO3nOyZMPzZAU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

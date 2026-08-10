@@ -1,0 +1,28 @@
+Laravel response requirement for exact sender photos
+===================================================
+
+The Flutter update remains compatible with the current API.
+
+For the correct profile picture to appear beside BOTH outgoing and incoming
+messages, every message returned from:
+
+GET /api/conversations/{conversation}/messages
+POST /api/conversations/{conversation}/messages
+
+should include:
+
+"sender": {
+  "id": 15,
+  "full_name": "User Name",
+  "profile_photo": "profiles/example.jpg"
+}
+
+The Flutter model also accepts these flat alternatives:
+
+"sender_name": "User Name",
+"sender_photo": "profiles/example.jpg"
+
+Without these fields:
+- incoming messages fall back to the other participant photo;
+- outgoing messages use the optional currentUserPhoto passed to ChatScreen;
+- when neither is supplied, initials are shown inside the white-bordered avatar.
